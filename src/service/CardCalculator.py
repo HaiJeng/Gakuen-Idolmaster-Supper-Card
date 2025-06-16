@@ -1,5 +1,6 @@
 import json
 
+from common.config import catch_card
 from model.SupportCard import SupportCard
 from util.ObjUtil import ObjUtil
 from util.StrUtil import StrUtil
@@ -82,12 +83,14 @@ class CardCalculator:
 
     # 计算整张卡片
     @staticmethod
-    def calculate_card(card_data, route_dict, entry_dict, user_dict):
+    def calculate_card(card_data:dict, route_dict, entry_dict, user_dict):
         # 准备卡片数据字典
         card_dict = {
             '破数': card_data['破数'],
             'name': card_data['name']
         }
+        for key in catch_card:
+            card_dict[key] = user_dict[key]
 
         # 计算所有bonuses
         for bonus in card_data['bonuses']:
@@ -114,7 +117,8 @@ class CardCalculator:
                 attributes[key] = CardCalculator.eval_formula(formula, context)
                 card_dict[key] = attributes[key]
         item = {}
-        if ObjUtil.not_empty(card_data['item']):
+
+        if card_data.__contains__('item'):
             if StrUtil.is_str(card_data['item']['道具属性']):
                 context = {
                     'card': card_dict,
@@ -156,6 +160,8 @@ if __name__ == "__main__":
     # 加载卡片数据
     with open('../resource/card/持有情况_数值和公式.json', 'r', encoding='utf-8') as f:
         cards = json.load(f)
+    # with open('test.json', 'r', encoding='utf-8') as f:
+    #     cards = json.load(f)
     with open('../resource/entry/词条.json', 'r', encoding='utf-8') as f:
         entry = json.load(f)
     with open('../resource/route/路线选择_均衡.json', 'r', encoding='utf-8') as f:
@@ -164,11 +170,11 @@ if __name__ == "__main__":
         user = json.load(f)
 
     # 计算第一张卡片
-    calculated_card = CardCalculator.calculate_card(
-        cards[0],
-        route,
-        entry,
-        user
-    )
-    print(cards[0])
-    print(calculated_card)
+    for card in cards:
+        calculated_card = CardCalculator.calculate_card(
+            card,
+            route,
+            entry,
+            user
+        )
+        print(calculated_card)

@@ -1,0 +1,46 @@
+[
+  {
+        "name": "奥義、三重とび！",
+        "nickname": "花式跳绳",
+        "稀有度": "SR",
+        "破数": 4,
+        "attributes": [
+            {
+                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT(card['基础值']+card['m强化']*route['m强化']+card['试验终了']+card['营业']*route['营业']+card['事件']))"
+            },
+            {
+                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT(card['基础值']+card['m强化']*route['m强化']+card['试验终了']+card['营业']*route['营业']+card['事件']))"
+            },
+            {
+                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT(card['基础值']+card['m强化']*route['m强化']+card['试验终了']+card['营业']*route['营业']+card['事件']))"
+            }
+        ],
+        "tags": [
+            "非凡"
+        ],
+        "color": "黄",
+        "bonuses": [
+            {
+                "m强化": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']==0,entry['SR']['m强化'][0],entry['SR']['m强化'][1]))"
+            },
+            {
+                "营业": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['营业'][0],entry['SR']['营业'][1]))"
+            },
+            {
+                "基础值": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['基础值'][0:5],card['破数']+1))"
+            },
+            {
+                "试验终了": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['试验终了'][0],entry['SR']['试验终了'][1]))"
+            },
+            {
+                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
+            }
+        ],
+        "item": {
+            "道具属性": "card['全力抓卡']*6",
+            "道具第一属性加成": "card['第一属性']+card['道具属性']",
+            "道具第二属性加成": "card['第二属性']+card['道具属性']",
+            "道具第三属性加成": "card['第三属性']+card['道具属性']"
+        }
+    }
+]
