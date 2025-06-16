@@ -2,6 +2,11 @@ import re
 from openpyxl import load_workbook
 import json
 
+"""
+用于解析路线页，将数据保存至resource/entry/路线.json
+src/resource/tmp/route_dict.json用于存储json对象和单元格位置的关系
+"""
+
 # 加载Excel文件
 wb = load_workbook('../mnt/支援卡-6.9新卡追加.xlsx')
 
@@ -114,10 +119,11 @@ def func_dict():
         print(value)
         if not value:
             break
-        route_dict.update({'\'路线\'!B'+str(row): value})
+        route_dict.update({'\'路线\'!B'+str(row): f"route['{value}']"})
+        route_dict.update({'路线!B'+str(row): f"route['{value}']"})
     print(route_dict)
     # 保存为JSON文件
-    with open(f'../resource/route/route_dict.json', 'w', encoding='utf-8') as f:
+    with open(f'../resource/tmp/route_dict.json', 'w', encoding='utf-8') as f:
         json.dump(route_dict, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
