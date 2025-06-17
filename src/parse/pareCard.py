@@ -5,6 +5,7 @@ import openpyxl
 from model.SupportCard import Rarity
 from service.CardCalculator import CardCalculator
 from util.ExcelUtil import ExcelUtil
+from util.ObjUtil import ObjUtil
 from util.StrUtil import StrUtil
 
 """
@@ -135,6 +136,7 @@ def replace_refs_with_dict(data: list) -> list:
 
     json_str = json_str.replace("路线!C6", "user['塞卡等效属性(20/1)']")
 
+    json_str = json_str.replace("路线!B4", "user['道具属性']")
     # 5. 替换在持有情况页json和单元格映射
     all_cell_dict = make_all_cell_value_dict()
     all_cell_sorted_keys = sorted(all_cell_dict.keys(), key=len, reverse=True)
@@ -152,10 +154,48 @@ def make_all_cell_value_dict() -> dict:
         for col in range(1, sheet.max_column + 1):
             value = sheet.cell(row=row, column=col).value
             name = sheet.cell(row=row - 1, column=col).value
-            if type(name) is str and name is not None and name != '':
-                if value is not None:
+            if StrUtil.is_str(name) and StrUtil.is_not_blank(name):
+                if ObjUtil.not_empty(value):
                     key = ExcelUtil.col_row_to_excel_col(col, row)
-                    cell_dict[key] = f"card['{name}']"
+                    if key=='Z17':
+                        print(name,key,value)
+                    if StrUtil.is_str(name) and name.startswith('='):
+                        cell_dict[key] = name
+                    else:
+                        cell_dict[key] = f"card['{name}']"
+
+        # 1. 将data转为JSON字符串
+    json_str = json.dumps(cell_dict, ensure_ascii=False)
+    print("route_data.keys()", route_data.keys())
+    # 2. 按键长度降序排序，避免短键误替换长键（如先替换"'路线'!B11"再替换"'路线'!B1"）
+    route_sorted_keys = sorted(route_data.keys(), key=len, reverse=True)
+    print("entry_data.keys()", entry_data.keys())
+    # 2. 按键长度降序排序，避免短键误替换长键（如先替换"'词条'!B11"再替换"'词条'!B1"）
+    entry_sorted_keys = sorted(entry_data.keys(), key=len, reverse=True)
+    # 3. 逐个替换Excel引用为中文描述
+    for excel_ref in route_sorted_keys:
+        json_str = json_str.replace(excel_ref.__str__(), route_data[excel_ref.__str__()])
+    # 4. 逐个替换Excel引用为中文描述
+    for excel_ref in entry_sorted_keys:
+        json_str = json_str.replace(excel_ref.__str__(), entry_data[excel_ref.__str__()])
+    json_str = json_str.replace("路线!C6", "user['塞卡等效属性(20/1)']")
+    json_str = json_str.replace("路线!B4", "user['道具属性']")
+    cell_dict = json.loads(json_str)
+    # 遍历 cell_dict 中的每个键值对
+    # cell_dict = relace_self(cell_dict)
+    # 保存为JSON文件
+    with open(f'../resource/tmp/cell_dict.json', 'w', encoding='utf-8') as _f:
+        json.dump(cell_dict, _f, ensure_ascii=False, indent=4)
+    return cell_dict
+
+
+def relace_self(cell_dict):
+    for key,value in cell_dict.items():
+        row,col=ExcelUtil.cell_to_row_col(key)
+        for j in range(col,1):
+            for i in range(row,1):
+                ikey=ExcelUtil.col_row_to_excel_col(j,i)
+                cell_dict[key]=value.replace(ikey,cell_dict[ikey])
     return cell_dict
 
 

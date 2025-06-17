@@ -1,4 +1,5 @@
 import json
+import re
 
 from common.config import catch_card
 from model.SupportCard import SupportCard
@@ -53,15 +54,35 @@ class CardCalculator:
         if formula.startswith('='):
             formula = formula[1:]
 
+        # 处理比较运算符中的等号（如 =, <==, >==）
+        # 使用更复杂的正则表达式，确保不匹配字符串中的等号
+        def replace_equals(match):
+            # 检查等号是否在引号内
+            before = match.string[:match.start()]
+            quotes_count = before.count('"') + before.count("'")
+            if quotes_count % 2 != 0:  # 如果在引号内
+                return '='  # 不替换
+            return '=='  # 替换为双等号
+
+        formula = re.sub(r'(?<![<>=!])=(?![=])', replace_equals, formula)
+        formula = formula.replace('<==', '<=').replace('>==', '>=')
+
+        # 处理嵌套等号（仅移除嵌套公式开头的等号）
+        def replace_nested_equal(match):
+            sub_formula = match.group(1)
+            if sub_formula.startswith('='):
+                sub_formula = sub_formula[1:]
+            return sub_formula
+
+        # 改进的正则表达式，只匹配函数参数中的等号开头的子公式
+        formula = re.sub(r'=(?=\w+\()(.*?)(?=[,)]|$)', replace_nested_equal, formula)
+
         # 替换Excel函数为Python函数
         replacements = {
             'IF(': 'CardCalculator.IF(',
             'INT(': 'CardCalculator.INT(',
             'CHOOSE(': 'CardCalculator.CHOOSE(',
             'INDEX(': 'CardCalculator.INDEX(',
-            '=': '==',  # 新增：将 = 替换为 ==
-            '<==': '<=',
-            '>==': '>='
         }
 
         for old, new in replacements.items():
@@ -83,7 +104,7 @@ class CardCalculator:
 
     # 计算整张卡片
     @staticmethod
-    def calculate_card(card_data:dict, route_dict, entry_dict, user_dict):
+    def calculate_card(card_data: dict, route_dict, entry_dict, user_dict):
         # 准备卡片数据字典
         card_dict = {
             '破数': card_data['破数'],
@@ -145,7 +166,7 @@ class CardCalculator:
         data = {
             'name': card_data['name'],
             'color': card_data['color'],
-            'sp': card_data['破数'],
+            'breakthrough': card_data['破数'],
             'rarity': card_data['稀有度'],
             'nickname': card_data['nickname'],
             'attributes': attributes,
@@ -169,12 +190,18 @@ if __name__ == "__main__":
     with open('../resource/user_config.json', 'r', encoding='utf-8') as f:
         user = json.load(f)
 
+    calculated_card = CardCalculator.calculate_card(
+        cards[2],
+        route,
+        entry,
+        user
+    )
     # 计算第一张卡片
-    for card in cards:
-        calculated_card = CardCalculator.calculate_card(
-            card,
-            route,
-            entry,
-            user
-        )
-        print(calculated_card)
+    # for card in cards:
+    #     calculated_card = CardCalculator.calculate_card(
+    #         card,
+    #         route,
+    #         entry,
+    #         user
+    #     )
+    #     print(calculated_card)

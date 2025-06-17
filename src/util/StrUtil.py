@@ -1,8 +1,13 @@
+from util.ObjUtil import ObjUtil
+
+
 class StrUtil:
     """字符串处理工具类"""
 
     @staticmethod
     def is_str(obj) -> bool:
+        if ObjUtil.is_empty(obj):
+            return False
         """检查对象是否为字符串类型"""
         return isinstance(obj, str)
 
@@ -94,22 +99,6 @@ class StrUtil:
         return [int(num) for num in re.findall(r'\d+', text)]
 
     @staticmethod
-    def remove_special_chars(text: str, keep_chars: str = "") -> str:
-        """
-        移除特殊字符，只保留字母、数字和指定字符
-
-        参数:
-            text: 要处理的文本
-            keep_chars: 额外保留的字符
-
-        返回:
-            处理后的字符串
-        """
-        import re
-        pattern = f"[^a-zA-Z0-9\s{re.escape(keep_chars)}]"
-        return re.sub(pattern, '', text)
-
-    @staticmethod
     def count_substring(text: str, substring: str, case_sensitive: bool = True) -> int:
         """
         计算子字符串出现的次数
@@ -136,3 +125,18 @@ class StrUtil:
                 count += 1
             else:
                 return count
+
+    @staticmethod
+    def has_uppercase_value(dictionary):
+        """
+        判断{str,str}的字典中，value是否包含大写，
+        :param dictionary: {str,str}
+        :return: 包含True/不包含False
+        """
+        return any(any(char.isupper() for char in value) for value in dictionary.values())
+    @staticmethod
+    def contains_excel_cell(s:str):
+        import re
+        # 匹配完整的单元格引用（前后无字母/数字）
+        pattern = r'(?:^|[^\w$])(\$?[A-Z]{1,3}\$?\d+)(?:$|[^\w$])'
+        return bool(re.search(pattern, s))
