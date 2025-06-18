@@ -1,7 +1,7 @@
 import json
 import re
 
-from common.config import catch_card
+from common.config import catch_card, attr_name_list
 from model.SupportCard import SupportCard
 from util.ObjUtil import ObjUtil
 from util.StrUtil import StrUtil
@@ -30,6 +30,14 @@ class CardCalculator:
     )
     """
 
+    @staticmethod
+    def AND(*conditions):
+        return all(conditions)
+
+    @staticmethod
+    def OR(*conditions):
+        return any(conditions)
+
     # 自定义函数映射Excel函数
     @staticmethod
     def IF(condition, true_val, false_val):
@@ -50,6 +58,8 @@ class CardCalculator:
     # 转换Excel公式为Python表达式
     @staticmethod
     def convert_formula(formula):
+        if not StrUtil.is_str(formula):
+            return formula
         # 移除开头的等号
         if formula.startswith('='):
             formula = formula[1:]
@@ -83,6 +93,8 @@ class CardCalculator:
             'INT(': 'CardCalculator.INT(',
             'CHOOSE(': 'CardCalculator.CHOOSE(',
             'INDEX(': 'CardCalculator.INDEX(',
+            'AND(': 'CardCalculator.AND(',
+            'OR(': 'CardCalculator.OR(',
         }
 
         for old, new in replacements.items():
@@ -125,7 +137,6 @@ class CardCalculator:
                 }
                 card_dict[key] = CardCalculator.eval_formula(formula, context)
         # 计算所有属性
-        attributes = {}
         for attr in card_data['attributes']:
             for key, formula in attr.items():
                 context = {
@@ -135,9 +146,7 @@ class CardCalculator:
                     'user': user_dict,
                     'CardCalculator': CardCalculator
                 }
-                attributes[key] = CardCalculator.eval_formula(formula, context)
-                card_dict[key] = attributes[key]
-        item = {}
+                card_dict[key] = CardCalculator.eval_formula(formula, context)
 
         if card_data.__contains__('item'):
             if StrUtil.is_str(card_data['item']['道具属性']):
@@ -160,20 +169,47 @@ class CardCalculator:
                         'user': user_dict,
                         'CardCalculator': CardCalculator
                     }
-                    item[key] = CardCalculator.eval_formula(formula, context)
-            item['道具属性'] = card_dict['道具属性']
-
+                    card_dict[key] = CardCalculator.eval_formula(formula, context)
         data = {
             'name': card_data['name'],
             'color': card_data['color'],
             'breakthrough': card_data['破数'],
             'rarity': card_data['稀有度'],
             'nickname': card_data['nickname'],
-            'attributes': attributes,
+            'attributes': {k: card_dict[k] for b in card_data['attributes'] for k, v in b.items()},
             'bonuses': {k: card_dict[k] for b in card_data['bonuses'] for k, v in b.items()},
-            'item': item
+            'item':  {k: card_dict[k] for k, v in card_data['item'].items()} if card_data.__contains__('item') else {},
         }
-        return SupportCard(**data)
+        return SupportCard(**data), {
+            'card': card_dict,
+            'route': route_dict,
+            'entry': entry_dict,
+            'user': user_dict,
+            'CardCalculator': CardCalculator
+        }
+
+
+def calculator_attr(name, context, _attr):
+    with open(f'../resource/attr/{_attr}.json', 'r', encoding='utf-8') as _f:
+        datas = json.load(_f)
+    result = {}
+    data = datas[name]
+    for key, value in data.items():
+        if key != '带出道具或S卡' and ObjUtil.not_empty(value) and StrUtil.is_str(value) and StrUtil.is_not_blank(
+                value):
+            result[key] = CardCalculator.eval_formula(value, context)
+        else:
+            result[key] = value
+    context.update({'attr': result})
+    _calculator_attr = data['calculator_attr']
+    for key, value in _calculator_attr.items():
+        if ObjUtil.not_empty(value) and StrUtil.is_str(value) and StrUtil.is_not_blank(
+                value):
+            result[key] = CardCalculator.eval_formula(value, context)
+        else:
+            result[key] = value
+    result.pop('calculator_attr')
+    return result
 
 
 # 使用示例
@@ -181,8 +217,6 @@ if __name__ == "__main__":
     # 加载卡片数据
     with open('../resource/card/持有情况_数值和公式.json', 'r', encoding='utf-8') as f:
         cards = json.load(f)
-    # with open('test.json', 'r', encoding='utf-8') as f:
-    #     cards = json.load(f)
     with open('../resource/entry/词条.json', 'r', encoding='utf-8') as f:
         entry = json.load(f)
     with open('../resource/route/路线选择_均衡.json', 'r', encoding='utf-8') as f:
@@ -190,18 +224,29 @@ if __name__ == "__main__":
     with open('../resource/user_config.json', 'r', encoding='utf-8') as f:
         user = json.load(f)
 
-    calculated_card = CardCalculator.calculate_card(
-        cards[2],
-        route,
-        entry,
-        user
-    )
+    # calculated_card, calculated_dict = CardCalculator.calculate_card(
+    #     cards[0],
+    #     route,
+    #     entry,
+    #     user
+    # )
+    # print(calculated_card, calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）", calculated_dict))
     # 计算第一张卡片
-    # for card in cards:
-    #     calculated_card = CardCalculator.calculate_card(
-    #         card,
-    #         route,
-    #         entry,
-    #         user
-    #     )
-    #     print(calculated_card)
+    for card in cards:
+        if card['name']=='ばたんきゅー':
+            calculated_card, calculated_dict = CardCalculator.calculate_card(
+                card,
+                route,
+                entry,
+                user
+            )
+            calculated_card.first_attribute= calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）",
+                                calculated_dict,
+                                attr_name_list[0])
+            calculated_card.second_attribute= calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）",
+                                calculated_dict,
+                                attr_name_list[1])
+            calculated_card.third_attribute= calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）",
+                                calculated_dict,
+                                attr_name_list[2])
+            print(calculated_card)

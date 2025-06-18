@@ -1,3 +1,5 @@
+import ast
+
 from util.ObjUtil import ObjUtil
 
 
@@ -25,6 +27,17 @@ class StrUtil:
         if not isinstance(string, str):
             raise TypeError(f"输入必须是字符串类型，实际类型为 {type(string).__name__}")
         return bool(string and not string.isspace())
+
+    @staticmethod
+    def contains_japanese(text):
+        # 平假名范围: U+3040 - U+309F
+        # 片假名范围: U+30A0 - U+30FF
+        if text == '':
+            return False
+        for char in text:
+            if ('ぁ' <= char <= 'ゔ') or ('ァ' <= char <= 'ヴ'):
+                return True
+        return False
 
     @staticmethod
     def is_blank(string: str) -> bool:
@@ -134,9 +147,20 @@ class StrUtil:
         :return: 包含True/不包含False
         """
         return any(any(char.isupper() for char in value) for value in dictionary.values())
+
     @staticmethod
-    def contains_excel_cell(s:str):
+    def contains_excel_cell(s: str):
         import re
         # 匹配完整的单元格引用（前后无字母/数字）
         pattern = r'(?:^|[^\w$])(\$?[A-Z]{1,3}\$?\d+)(?:$|[^\w$])'
         return bool(re.search(pattern, s))
+    @staticmethod
+    def is_safe_expression(source):
+        if not StrUtil.is_str(source):
+            return False
+        try:
+            # 尝试解析源代码
+            ast.parse(source, mode='eval')
+            return True
+        except SyntaxError:
+            return False

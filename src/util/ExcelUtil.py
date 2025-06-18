@@ -3,7 +3,7 @@ from openpyxl.utils import column_index_from_string
 
 class ExcelUtil:
     @staticmethod
-    def col_row_to_excel_col(col: int, row: int):
+    def row_col_to_excel_col( row: int,col: int):
         """
         将Excel列索引(整数)和行索引转换为字母单元格
         :param row: 行索引

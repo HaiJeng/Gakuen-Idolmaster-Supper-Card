@@ -2320,41 +2320,6 @@
         }
     },
     {
-        "name": "のらりくらりしっかり",
-        "nickname": "",
-        "稀有度": "SSR",
-        "破数": 4,
-        "attributes": [
-            {
-                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT((card['百分比']/100)*route['一属性值']+card['支给']*route['支给']+card['训练']*route['一属训练']+card['事件']+20),CardCalculator.INT((card['百分比']/100)*route['一属性值']+card['支给']*route['支给']+card['训练']*route['一属训练']+card['事件'])))"
-            },
-            {
-                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT((card['百分比']/100)*route['二属性值']+card['支给']*route['支给']+card['训练']*route['二属训练']+card['事件']+20),CardCalculator.INT((card['百分比']/100)*route['二属性值']+card['支给']*route['支给']+card['训练']*route['二属训练']+card['事件'])))"
-            },
-            {
-                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT((card['百分比']/100)*route['三属性值']+card['支给']*route['支给']+card['训练']*route['三属训练']+card['事件']+20),CardCalculator.INT((card['百分比']/100)*route['三属性值']+card['支给']*route['支给']+card['训练']*route['三属训练']+card['事件'])))"
-            }
-        ],
-        "tags": [
-            "通用"
-        ],
-        "color": "红",
-        "bonuses": [
-            {
-                "训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['训练'][0],entry['SR']['训练'][1]))"
-            },
-            {
-                "百分比": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['百分比'][0:5],card['破数']+1))"
-            },
-            {
-                "支给": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['支给'][0],entry['SR']['支给'][1]))"
-            },
-            {
-                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
-            }
-        ]
-    },
-    {
         "name": "今はあえて、背を向けて",
         "nickname": "刺猬",
         "稀有度": "SSR",
@@ -2384,41 +2349,6 @@
             },
             {
                 "试验终了": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['试验终了'][0],entry['SR']['试验终了'][1]))"
-            },
-            {
-                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
-            }
-        ]
-    },
-    {
-        "name": "イヤホンはんぶんこ",
-        "nickname": "",
-        "稀有度": "SSR",
-        "破数": 4,
-        "attributes": [
-            {
-                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT(card['基础值']+card['外出']*route['外出']+card['休息']*route['休息']+card['事件']+20),CardCalculator.INT(card['基础值']+card['外出']*route['外出']+card['休息']*route['休息']+card['事件'])))"
-            },
-            {
-                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT(card['基础值']+card['外出']*route['外出']+card['休息']*route['休息']+card['事件']+20),CardCalculator.INT(card['基础值']+card['外出']*route['外出']+card['休息']*route['休息']+card['事件'])))"
-            },
-            {
-                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT(card['基础值']+card['外出']*route['外出']+card['休息']*route['休息']+card['事件']+20),CardCalculator.INT(card['基础值']+card['外出']*route['外出']+card['休息']*route['休息']+card['事件'])))"
-            }
-        ],
-        "tags": [
-            "理性"
-        ],
-        "color": "红",
-        "bonuses": [
-            {
-                "休息": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['休息'][0],entry['SR']['休息'][1]))"
-            },
-            {
-                "基础值": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['基础值'][0:5],card['破数']+1))"
-            },
-            {
-                "外出": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['外出'][0],entry['SR']['外出'][1]))"
             },
             {
                 "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
@@ -2457,7 +2387,48 @@
             }
         ],
         "item": {
-            "道具属性": "card['干劲抓卡']*6",
+            "道具属性": "user['干劲抓卡']*6",
+            "道具第一属性加成": "card['第一属性']+card['道具属性']",
+            "道具第二属性加成": "card['第二属性']+card['道具属性']",
+            "道具第三属性加成": "card['第三属性']+card['道具属性']"
+        }
+    },
+    {
+        "name": "第五種接近遭遇",
+        "nickname": "电风扇",
+        "稀有度": "SSR",
+        "破数": 4,
+        "attributes": [
+            {
+                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT((card['百分比']/100)*route['一属性值']+card['相谈']*route['相谈']+card['训练']*route['一属训练']+card['事件']))"
+            },
+            {
+                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT((card['百分比']/100)*route['二属性值']+card['相谈']*route['相谈']+card['训练']*route['二属训练']+card['事件']))"
+            },
+            {
+                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT((card['百分比']/100)*route['三属性值']+card['相谈']*route['相谈']+card['训练']*route['三属训练']+card['事件']))"
+            }
+        ],
+        "tags": [
+            "感性"
+        ],
+        "color": "红",
+        "bonuses": [
+            {
+                "训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['训练'][0],entry['SR']['训练'][1]))"
+            },
+            {
+                "百分比": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['百分比'][0:5],card['破数']+1))"
+            },
+            {
+                "相谈": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['相谈'][0],entry['SR']['相谈'][1]))"
+            },
+            {
+                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
+            }
+        ],
+        "item": {
+            "道具属性": "user['集中抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -2528,6 +2499,39 @@
             },
             {
                 "营业": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['营业'][0],entry['SR']['营业'][1]))"
+            },
+            {
+                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
+            }
+        ]
+    },
+    {
+        "name": "基礎＞応用",
+        "nickname": "红老师",
+        "稀有度": "SSR",
+        "破数": 4,
+        "attributes": [
+            {
+                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT(card['基础值']+card['抓卡']*(route['抓a卡']+route['抓m卡'])+card['事件']))"
+            },
+            {
+                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT(card['基础值']+card['抓卡']*(route['抓a卡']+route['抓m卡'])+card['事件']))"
+            },
+            {
+                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INT(card['基础值']+card['抓卡']*(route['抓a卡']+route['抓m卡'])+card['事件']))"
+            }
+        ],
+        "tags": [
+            "通用",
+            "SP"
+        ],
+        "color": "红",
+        "bonuses": [
+            {
+                "基础值": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['基础值'][0:5],card['破数']+1))"
+            },
+            {
+                "抓卡": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['抓卡'][0],entry['SR']['抓卡'][1]))"
             },
             {
                 "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
@@ -2645,7 +2649,7 @@
             }
         ],
         "item": {
-            "道具属性": "card['元气抓卡']*6",
+            "道具属性": "user['元气抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -2770,41 +2774,6 @@
         ]
     },
     {
-        "name": "魅惑の大腿四頭筋",
-        "nickname": "",
-        "稀有度": "SR",
-        "破数": 4,
-        "attributes": [
-            {
-                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT((card['百分比']/100)*route['一属性值']+card['支给']*route['支给']+card['训练']*route['一属训练']+card['事件']+20),CardCalculator.INT((card['百分比']/100)*route['一属性值']+card['支给']*route['支给']+card['训练']*route['一属训练']+card['事件'])))"
-            },
-            {
-                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT((card['百分比']/100)*route['二属性值']+card['支给']*route['支给']+card['训练']*route['二属训练']+card['事件']+20),CardCalculator.INT((card['百分比']/100)*route['二属性值']+card['支给']*route['支给']+card['训练']*route['二属训练']+card['事件'])))"
-            },
-            {
-                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT((card['百分比']/100)*route['三属性值']+card['支给']*route['支给']+card['训练']*route['三属训练']+card['事件']+20),CardCalculator.INT((card['百分比']/100)*route['三属性值']+card['支给']*route['支给']+card['训练']*route['三属训练']+card['事件'])))"
-            }
-        ],
-        "tags": [
-            "通用"
-        ],
-        "color": "蓝",
-        "bonuses": [
-            {
-                "训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['训练'][0],entry['SR']['训练'][1]))"
-            },
-            {
-                "百分比": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['百分比'][0:5],card['破数']+1))"
-            },
-            {
-                "支给": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['支给'][0],entry['SR']['支给'][1]))"
-            },
-            {
-                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
-            }
-        ]
-    },
-    {
         "name": "パシャっとキメポ",
         "nickname": "sr蓝睡",
         "稀有度": "SR",
@@ -2875,7 +2844,7 @@
             }
         ],
         "item": {
-            "道具属性": "card['好调抓卡']*6",
+            "道具属性": "user['好调抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -3137,7 +3106,7 @@
             }
         ],
         "item": {
-            "道具属性": "card['干劲抓卡']*6",
+            "道具属性": "user['干劲抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -3326,7 +3295,7 @@
             }
         ],
         "item": {
-            "道具属性": "card['强气抓卡']*6",
+            "道具属性": "user['强气抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -3351,7 +3320,7 @@
         "tags": [
             "通用"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "强化": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['强化'][0],entry['SR']['强化'][1]))"
@@ -3386,7 +3355,7 @@
         "tags": [
             "通用"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['训练'][0],entry['SR']['训练'][1]))"
@@ -3427,7 +3396,7 @@
         "tags": [
             "通用"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "通常训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['通常训练'][0],entry['SR']['通常训练'][1]))"
@@ -3450,41 +3419,6 @@
         }
     },
     {
-        "name": "てとりあしとり",
-        "nickname": "",
-        "稀有度": "SR",
-        "破数": 4,
-        "attributes": [
-            {
-                "第一属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT(card['基础值']+card['支给']*route['支给']+card['训练']*route['一属训练']+card['事件']+20),CardCalculator.INT(card['基础值']+card['支给']*route['支给']+card['训练']*route['一属训练']+card['事件'])))"
-            },
-            {
-                "第二属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT(card['基础值']+card['支给']*route['支给']+card['训练']*route['二属训练']+card['事件']+20),CardCalculator.INT(card['基础值']+card['支给']*route['支给']+card['训练']*route['二属训练']+card['事件'])))"
-            },
-            {
-                "第三属性": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(user['塞卡等效属性(20/1)']==\"计算\",CardCalculator.INT(card['基础值']+card['支给']*route['支给']+card['训练']*route['三属训练']+card['事件']+20),CardCalculator.INT(card['基础值']+card['支给']*route['支给']+card['训练']*route['三属训练']+card['事件'])))"
-            }
-        ],
-        "tags": [
-            "通用"
-        ],
-        "color": "黄",
-        "bonuses": [
-            {
-                "训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['训练'][0],entry['SR']['训练'][1]))"
-            },
-            {
-                "基础值": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['基础值'][0:5],card['破数']+1))"
-            },
-            {
-                "支给": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=2,entry['SR']['支给'][0],entry['SR']['支给'][1]))"
-            },
-            {
-                "事件": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.CHOOSE(card['破数']+1,entry['SR']['事件'][0],entry['SR']['事件'][0],entry['SR']['事件'][1],entry['SR']['事件'][1],entry['SR']['事件'][2]))"
-            }
-        ]
-    },
-    {
         "name": "体当たりのラブコール",
         "nickname": "过肩摔",
         "稀有度": "SR",
@@ -3504,7 +3438,7 @@
             "通用",
             "SP"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"
@@ -3539,7 +3473,7 @@
         "tags": [
             "理性"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"
@@ -3555,7 +3489,7 @@
             }
         ],
         "item": {
-            "道具属性": "card['好印象抓卡']*6",
+            "道具属性": "user['好印象抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -3580,7 +3514,7 @@
         "tags": [
             "感性"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['训练'][0],entry['SR']['训练'][1]))"
@@ -3615,7 +3549,7 @@
         "tags": [
             "理性"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "外出": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']==0,entry['SR']['外出'][0],entry['SR']['外出'][1]))"
@@ -3654,7 +3588,7 @@
             "理性",
             "SP"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"
@@ -3689,7 +3623,7 @@
         "tags": [
             "通用"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"
@@ -3725,7 +3659,7 @@
             "通用",
             "SP"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "基础值": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.INDEX(entry['SR']['基础值'][0:5],card['破数']+1))"
@@ -3758,7 +3692,7 @@
             "非凡",
             "SP"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"
@@ -3793,7 +3727,7 @@
         "tags": [
             "非凡"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "强化": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']==0,entry['SR']['强化'][0],entry['SR']['强化'][1]))"
@@ -3831,7 +3765,7 @@
         "tags": [
             "非凡"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "m强化": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']==0,entry['SR']['m强化'][0],entry['SR']['m强化'][1]))"
@@ -3850,7 +3784,7 @@
             }
         ],
         "item": {
-            "道具属性": "card['全力抓卡']*6",
+            "道具属性": "user['全力抓卡']*6",
             "道具第一属性加成": "card['第一属性']+card['道具属性']",
             "道具第二属性加成": "card['第二属性']+card['道具属性']",
             "道具第三属性加成": "card['第三属性']+card['道具属性']"
@@ -3876,7 +3810,7 @@
             "非凡",
             "SP"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"
@@ -3912,7 +3846,7 @@
             "理性",
             "SP"
         ],
-        "color": "黄",
+        "color": "红",
         "bonuses": [
             {
                 "sp训练": "CardCalculator.IF(card['破数']==-1,0,CardCalculator.IF(card['破数']<=3,entry['SR']['sp训练'][0],entry['SR']['sp训练'][1]))"

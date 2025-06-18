@@ -2,6 +2,8 @@ import re
 from openpyxl import load_workbook
 import json
 
+from parse.util.parse_to_route_dict_util import ParseToRouteDictUtil
+
 """
 用于解析路线页，将数据保存至resource/entry/路线.json
 src/resource/tmp/route_dict.json用于存储json对象和单元格位置的关系
@@ -104,30 +106,8 @@ def func(route: str):
                 json.dump(routes_data, f, ensure_ascii=False, indent=4)
 
 
-def func_dict():
-    # 查找route单元格的位置
-    route_choice_row = None
-
-    for row in range(1, sheet.max_row + 1):
-        cell_value = sheet.cell(row=row, column=2).value
-        if cell_value == '路线选择':
-            route_choice_row = row
-            break
-    route_dict = {}
-    for row in range(route_choice_row + 1, sheet.max_row + 1):
-        value = sheet.cell(row=row, column=1).value
-        print(value)
-        if not value:
-            break
-        route_dict.update({'\'路线\'!B'+str(row): f"route['{value}']"})
-        route_dict.update({'路线!B'+str(row): f"route['{value}']"})
-    print(route_dict)
-    # 保存为JSON文件
-    with open(f'../resource/tmp/route_dict.json', 'w', encoding='utf-8') as f:
-        json.dump(route_dict, f, ensure_ascii=False, indent=4)
-
 if __name__ == '__main__':
-    func_dict()
+    ParseToRouteDictUtil(sheet).parse_to_route_dict()
     func("路线选择")
     func("NIA通常")
     func("NIA强化")
