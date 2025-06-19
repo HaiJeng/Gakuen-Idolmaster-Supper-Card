@@ -26,3 +26,5 @@ class ParseToFirstAttrDictUtil:
         with open(f'../resource/tmp/{self.sheet_name}_dict.json', 'w', encoding='utf-8') as f:
             json.dump(first_attr_dict, f, ensure_ascii=False, indent=4)
         return first_attr_dict
+    def parse_to_attr_cell_dict_util(self):
+        row_max = 2

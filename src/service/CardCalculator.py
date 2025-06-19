@@ -240,13 +240,13 @@ if __name__ == "__main__":
                 entry,
                 user
             )
-            calculated_card.first_attribute= calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）",
+            calculated_card.first_attribute= calculator_attr(calculated_card.name,
                                 calculated_dict,
                                 attr_name_list[0])
-            calculated_card.second_attribute= calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）",
+            calculated_card.second_attribute= calculator_attr(calculated_card.name,
                                 calculated_dict,
                                 attr_name_list[1])
-            calculated_card.third_attribute= calculator_attr(f"{calculated_card.name}（{calculated_card.nickname}）",
+            calculated_card.third_attribute= calculator_attr(calculated_card.name,
                                 calculated_dict,
                                 attr_name_list[2])
             print(calculated_card)

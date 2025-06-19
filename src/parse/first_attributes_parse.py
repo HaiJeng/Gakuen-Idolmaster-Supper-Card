@@ -29,7 +29,9 @@ def get_attribute(sheet_name: str):
     for row in range(2, sheet.max_row):
         if ObjUtil.is_empty(sheet.cell(row=row, column=1).value):
             break
-        card_name = sheet.cell(row=row, column=1).value
+        tmp_name = sheet.cell(row=row, column=1).value
+        parts = tmp_name.split("（")
+        card_name = parts[0].strip()
         card_value = {}
         calculator_attr_col = 4
         for column in range(4, sheet.max_column):
@@ -55,7 +57,7 @@ def get_attribute(sheet_name: str):
     return first_attribute
 
 
-def formate_attribute_dict(attr_data: dict,attr_dict:dict):
+def formate_attribute_dict(attr_data: dict, attr_dict: dict):
     json_str = json.dumps(attr_data, ensure_ascii=False)
 
     # 2. 按键长度降序排序，避免短键误替换长键（如先替换"'持有情况'!B11"再替换"'持有情况'!B1"）
@@ -92,8 +94,9 @@ def formate_attribute_dict_calculator(attr_dict: dict):
 
 if __name__ == '__main__':
     for _str in attr_name_list:
-        _attr_dict=ParseToFirstAttrDictUtil(wb[_str], _str).parse_to_first_attr_dict_util()
+        _attr_dict = ParseToFirstAttrDictUtil(wb[_str], _str).parse_to_first_attr_dict_util()
         data = get_attribute(_str)
         data = formate_attribute_dict(data, _attr_dict)
         with open(f'../resource/attr/{_str}.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
+    ParseToFirstAttrDictUtil(wb['第一属性比较'], '第一属性比较').parse_to_attr_cell_dict_util()

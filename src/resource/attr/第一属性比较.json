@@ -1,5 +1,5 @@
 {
-    "相変わらず不器用ね（幼驯染）": {
+    "相変わらず不器用ね": {
         "属性值": "card['第一属性']-2*0.00001",
         "流派": 2,
         "sp": 0,
@@ -45,7 +45,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "夏を満喫するわよ！（水枪）": {
+    "夏を満喫するわよ！": {
         "属性值": "card['第一属性']-3*0.00001",
         "流派": 2,
         "sp": 0,
@@ -91,7 +91,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ここから始まるんだね！（相册）": {
+    "ここから始まるんだね！": {
         "属性值": "card['第一属性']-4*0.00001",
         "流派": 1,
         "sp": 0,
@@ -137,7 +137,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "似合うんじゃない？（气球）": {
+    "似合うんじゃない？": {
         "属性值": "card['第一属性']-5*0.00001",
         "流派": 2,
         "sp": 0,
@@ -183,7 +183,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "利用し合うのが友達！（黄毛摸鱼）": {
+    "利用し合うのが友達！": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-6*0.00001",
         "流派": 0,
         "sp": 0,
@@ -229,7 +229,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "二人ならあっという間だね（红50）": {
+    "二人ならあっという間だね": {
         "属性值": "card['第一属性']-7*0.00001",
         "流派": 0,
         "sp": 0,
@@ -275,7 +275,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ぜったい追いついてやる！（红叶）": {
+    "ぜったい追いついてやる！": {
         "属性值": "card['第一属性']-8*0.00001",
         "流派": 0,
         "sp": 0,
@@ -321,7 +321,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "相手にとって不足なしよ！（对战）": {
+    "相手にとって不足なしよ！": {
         "属性值": "card['第一属性']-9*0.00001",
         "流派": 3,
         "sp": 1,
@@ -367,7 +367,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "もう一度、最初から！（fes1）": {
+    "もう一度、最初から！": {
         "属性值": "card['第一属性']-10*0.00001",
         "流派": 1,
         "sp": 1,
@@ -413,7 +413,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "これが私達の、3年間（蓝书签）": {
+    "これが私達の、3年間": {
         "属性值": "card['第一属性']-11*0.00001",
         "流派": 0,
         "sp": 0,
@@ -459,7 +459,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "会長、準備は万端です（准备万端）": {
+    "会長、準備は万端です": {
         "属性值": "card['第一属性']-12*0.00001",
         "流派": 2,
         "sp": 0,
@@ -505,7 +505,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "バレンタイン♡会議中ーっ！（情人节会议）": {
+    "バレンタイン♡会議中ーっ！": {
         "属性值": "card['第一属性']-13*0.00001",
         "流派": 3,
         "sp": 0,
@@ -551,7 +551,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "2名様、ご案内～♪（毛球偷吃）": {
+    "2名様、ご案内～♪": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-14*0.00001",
         "流派": 0,
         "sp": 0,
@@ -597,7 +597,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "まだ上がりませんように！（撑伞）": {
+    "まだ上がりませんように！": {
         "属性值": "card['第一属性']-15*0.00001",
         "流派": 0,
         "sp": 0,
@@ -643,7 +643,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "キラキラして綺麗～っ！（光夜）": {
+    "キラキラして綺麗～っ！": {
         "属性值": "card['第一属性']-16*0.00001",
         "流派": 1,
         "sp": 0,
@@ -689,7 +689,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "新生活のはじまりだね（米袋）": {
+    "新生活のはじまりだね": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-17*0.00001",
         "流派": 3,
         "sp": 1,
@@ -735,7 +735,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "また、あんなに無理をして（红毛巾）": {
+    "また、あんなに無理をして": {
         "属性值": "card['第一属性']-18*0.00001",
         "流派": 0,
         "sp": 0,
@@ -781,7 +781,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "新たな挑戦の成功ですわ！（黄书签）": {
+    "新たな挑戦の成功ですわ！": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-19*0.00001",
         "流派": 0,
         "sp": 1,
@@ -827,7 +827,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "あなたたちのことが好き（秋千）": {
+    "あなたたちのことが好き": {
         "属性值": "card['第一属性']-20*0.00001",
         "流派": 2,
         "sp": 1,
@@ -873,7 +873,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "花火、やりませんか……？（花火）": {
+    "花火、やりませんか……？": {
         "属性值": "card['第一属性']-21*0.00001",
         "流派": 1,
         "sp": 0,
@@ -919,7 +919,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ガールズ♡トーク（女子会）": {
+    "ガールズ♡トーク": {
         "属性值": "card['第一属性']-22*0.00001",
         "流派": 1,
         "sp": 0,
@@ -965,7 +965,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "お姉ちゃんに任せなさい！（黄发卡）": {
+    "お姉ちゃんに任せなさい！": {
         "属性值": "card['第一属性']-23*0.00001",
         "流派": 0,
         "sp": 0,
@@ -1011,7 +1011,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "絶対にお渡ししますわっ！（巧克力）": {
+    "絶対にお渡ししますわっ！": {
         "属性值": "card['第一属性']-24*0.00001",
         "流派": 2,
         "sp": 1,
@@ -1057,7 +1057,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ほっぺた、ぷに（黄永年）": {
+    "ほっぺた、ぷに": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-25*0.00001",
         "流派": 0,
         "sp": 0,
@@ -1103,7 +1103,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "奥義、三重とび！（花式跳绳）": {
+    "奥義、三重とび！": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-26*0.00001",
         "流派": 3,
         "sp": 0,
@@ -1149,7 +1149,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "こいつらめんどくさー（红吵架）": {
+    "こいつらめんどくさー": {
         "属性值": "card['第一属性']-27*0.00001",
         "流派": 1,
         "sp": 0,
@@ -1195,7 +1195,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "わたしたち、やればできる（蓝厨房）": {
+    "わたしたち、やればできる": {
         "属性值": "card['第一属性']-28*0.00001",
         "流派": 2,
         "sp": 0,
@@ -1241,7 +1241,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ひとりで立てますか？（溜冰）": {
+    "ひとりで立てますか？": {
         "属性值": "card['第一属性']-29*0.00001",
         "流派": 0,
         "sp": 1,
@@ -1287,7 +1287,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "まるで王子様みたいな（王子）": {
+    "まるで王子様みたいな": {
         "属性值": "card['第一属性']-30*0.00001",
         "流派": 0,
         "sp": 1,
@@ -1333,7 +1333,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "さみだれ（公交车站）": {
+    "さみだれ": {
         "属性值": "card['第一属性']-31*0.00001",
         "流派": 3,
         "sp": 0,
@@ -1379,7 +1379,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "夏を楽しみましょう！（红购物）": {
+    "夏を楽しみましょう！": {
         "属性值": "card['第一属性']-32*0.00001",
         "流派": 1,
         "sp": 0,
@@ -1425,7 +1425,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "もうっ！　冷たいよ！（蓝喷水）": {
+    "もうっ！　冷たいよ！": {
         "属性值": "card['第一属性']-33*0.00001",
         "流派": 2,
         "sp": 1,
@@ -1471,7 +1471,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "おいしい顔、いただき～！（蓝拍照）": {
+    "おいしい顔、いただき～！": {
         "属性值": "card['第一属性']-34*0.00001",
         "流派": 0,
         "sp": 1,
@@ -1517,7 +1517,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "愛無き暗記は難しい（永年）": {
+    "愛無き暗記は難しい": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-35*0.00001",
         "流派": 0,
         "sp": 0,
@@ -1563,7 +1563,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "嬉し恥ずかし夢心地（姐姐百科）": {
+    "嬉し恥ずかし夢心地": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-36*0.00001",
         "流派": 0,
         "sp": 0,
@@ -1609,7 +1609,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "はいっ、みんなも一緒に♪（fes3）": {
+    "はいっ、みんなも一緒に♪": {
         "属性值": "card['第一属性']-37*0.00001",
         "流派": 3,
         "sp": 1,
@@ -1655,7 +1655,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "晴れたね（蓝睡）": {
+    "晴れたね": {
         "属性值": "card['第一属性']-38*0.00001",
         "流派": 0,
         "sp": 0,
@@ -1701,7 +1701,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "きゅる～んωポーズッ☆（可爱pose）": {
+    "きゅる～んωポーズッ☆": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-39*0.00001",
         "流派": 2,
         "sp": 1,
@@ -1747,7 +1747,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "かちこちストレッチ（菲柱体前屈）": {
+    "かちこちストレッチ": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-40*0.00001",
         "流派": 2,
         "sp": 0,
@@ -1793,7 +1793,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "SSCの爆誕（毒蘑菇旧鞋跟）": {
+    "SSCの爆誕": {
         "属性值": "card['第一属性']-41*0.00001",
         "流派": 3,
         "sp": 1,
@@ -1839,7 +1839,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "私の目に狂いはない（黄再动）": {
+    "私の目に狂いはない": {
         "属性值": "card['第一属性']-42*0.00001",
         "流派": 0,
         "sp": 0,
@@ -1885,7 +1885,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "可愛いと可愛いで可愛い！（三可爱）": {
+    "可愛いと可愛いで可愛い！": {
         "属性值": "card['第一属性']-43*0.00001",
         "流派": 0,
         "sp": 1,
@@ -1931,7 +1931,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "一時休戦です（一时休战）": {
+    "一時休戦です": {
         "属性值": "card['第一属性']-44*0.00001",
         "流派": 1,
         "sp": 0,
@@ -1977,7 +1977,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "さあ、もう一戦！（黑岩射手）": {
+    "さあ、もう一戦！": {
         "属性值": "card['第一属性']-45*0.00001",
         "流派": 0,
         "sp": 0,
@@ -2023,7 +2023,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "あっちも行きたいですわ！（大饮料）": {
+    "あっちも行きたいですわ！": {
         "属性值": "card['第一属性']-46*0.00001",
         "流派": 1,
         "sp": 1,
@@ -2069,7 +2069,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "待ちなさーい！（蓝旗）": {
+    "待ちなさーい！": {
         "属性值": "card['第一属性']-47*0.00001",
         "流派": 3,
         "sp": 1,
@@ -2115,7 +2115,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ゆっくりと過ごしましょう（黄购物）": {
+    "ゆっくりと過ごしましょう": {
         "属性值": "card['第一属性']-48*0.00001",
         "流派": 2,
         "sp": 0,
@@ -2161,7 +2161,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ふわふわなお面？（小熊）": {
+    "ふわふわなお面？": {
         "属性值": "card['第一属性']-49*0.00001",
         "流派": 0,
         "sp": 1,
@@ -2207,7 +2207,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "りっぱなすすき！（麦穗）": {
+    "りっぱなすすき！": {
         "属性值": "card['第一属性']-50*0.00001",
         "流派": 2,
         "sp": 0,
@@ -2253,7 +2253,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "あら、奇遇ね（红过牌）": {
+    "あら、奇遇ね": {
         "属性值": "card['第一属性']-51*0.00001",
         "流派": 0,
         "sp": 0,
@@ -2299,7 +2299,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "まごころを込めて（巧可琴音）": {
+    "まごころを込めて": {
         "属性值": "card['第一属性']-52*0.00001",
         "流派": 2,
         "sp": 0,
@@ -2345,7 +2345,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "そろそろ焼けたかな？（红薯）": {
+    "そろそろ焼けたかな？": {
         "属性值": "card['第一属性']-53*0.00001",
         "流派": 2,
         "sp": 1,
@@ -2391,7 +2391,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "トンボをつかまえて（小秋见）": {
+    "トンボをつかまえて": {
         "属性值": "card['第一属性']-54*0.00001",
         "流派": 1,
         "sp": 0,
@@ -2437,7 +2437,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "屈辱の2位（马给马给）": {
+    "屈辱の2位": {
         "属性值": "card['第一属性']-55*0.00001",
         "流派": 2,
         "sp": 0,
@@ -2483,7 +2483,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "虫愛づる王子様（虫爱）": {
+    "虫愛づる王子様": {
         "属性值": "card['第一属性']-56*0.00001",
         "流派": 3,
         "sp": 0,
@@ -2529,7 +2529,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "興味深い飲み物（姐汁）": {
+    "興味深い飲み物": {
         "属性值": "card['第一属性']-57*0.00001",
         "流派": 1,
         "sp": 1,
@@ -2575,7 +2575,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ピューとシューの二重奏（二重奏）": {
+    "ピューとシューの二重奏": {
         "属性值": "card['第一属性']-58*0.00001",
         "流派": 2,
         "sp": 0,
@@ -2621,7 +2621,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "千奈の恩返し（恩返）": {
+    "千奈の恩返し": {
         "属性值": "card['第一属性']-59*0.00001",
         "流派": 2,
         "sp": 0,
@@ -2667,7 +2667,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "次の桜の季節には。（花荫）": {
+    "次の桜の季節には。": {
         "属性值": "card['第一属性']-60*0.00001",
         "流派": 0,
         "sp": 0,
@@ -2713,7 +2713,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "今はあえて、背を向けて（刺猬）": {
+    "今はあえて、背を向けて": {
         "属性值": "card['第一属性']-61*0.00001",
         "流派": 0,
         "sp": 1,
@@ -2759,7 +2759,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ふわふわでワクワク（蓝饮料）": {
+    "ふわふわでワクワク": {
         "属性值": "card['第一属性']-62*0.00001",
         "流派": 0,
         "sp": 1,
@@ -2805,7 +2805,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "体当たりのラブコール（过肩摔）": {
+    "体当たりのラブコール": {
         "属性值": "card['第一属性']-63*0.00001",
         "流派": 0,
         "sp": 1,
@@ -2851,7 +2851,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "マイペース、マイライフ（红13）": {
+    "マイペース、マイライフ": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-64*0.00001",
         "流派": 0,
         "sp": 0,
@@ -2897,7 +2897,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "実食！例のSSD（蓝13）": {
+    "実食！例のSSD": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-65*0.00001",
         "流派": 0,
         "sp": 0,
@@ -2943,7 +2943,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "思惑とガクガク（黄13）": {
+    "思惑とガクガク": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-66*0.00001",
         "流派": 0,
         "sp": 0,
@@ -2989,7 +2989,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ほら、一緒に持と♪（蓝再动）": {
+    "ほら、一緒に持と♪": {
         "属性值": "card['第一属性']-67*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3035,7 +3035,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "お疲れ様、千奈ちゃん。（辛苦了千奈）": {
+    "お疲れ様、千奈ちゃん。": {
         "属性值": "card['第一属性']-68*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3081,7 +3081,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "「ア」じゃなくて「エ」！（黄补课）": {
+    "「ア」じゃなくて「エ」！": {
         "属性值": "card['第一属性']-69*0.00001",
         "流派": 2,
         "sp": 1,
@@ -3127,7 +3127,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "何やってるんだろう、（红再动）": {
+    "何やってるんだろう、": {
         "属性值": "card['第一属性']-70*0.00001",
         "流派": 0,
         "sp": 1,
@@ -3173,7 +3173,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ディカプルエックスエル！（圣诞斯大广）": {
+    "ディカプルエックスエル！": {
         "属性值": "card['第一属性']-71*0.00001",
         "流派": 1,
         "sp": 0,
@@ -3219,7 +3219,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "カロリー/2でハッピー×2（包子）": {
+    "カロリー/2でハッピー×2": {
         "属性值": "card['第一属性']-72*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3265,7 +3265,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "サンマ、パタパタ（千奈做饭）": {
+    "サンマ、パタパタ": {
         "属性值": "card['第一属性']-73*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3311,7 +3311,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "やさしさ、あったかい（白毛哭哭）": {
+    "やさしさ、あったかい": {
         "属性值": "card['第一属性']-74*0.00001",
         "流派": 1,
         "sp": 0,
@@ -3357,7 +3357,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ほっとけないクラスメイト（朝助）": {
+    "ほっとけないクラスメイト": {
         "属性值": "card['第一属性']-75*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3403,7 +3403,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "第五種接近遭遇（电风扇）": {
+    "第五種接近遭遇": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-76*0.00001",
         "流派": 1,
         "sp": 0,
@@ -3449,7 +3449,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ぐぬぬぬぬ…………！（蓝50）": {
+    "ぐぬぬぬぬ…………！": {
         "属性值": "card['第一属性']-77*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3495,7 +3495,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "まじか。（光舞台）": {
+    "まじか。": {
         "属性值": "card['第一属性']-78*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3541,7 +3541,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "あったかいね（围巾）": {
+    "あったかいね": {
         "属性值": "card['第一属性']-79*0.00001",
         "流派": 2,
         "sp": 1,
@@ -3587,7 +3587,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "第2回教室パーティー！（一年一班）": {
+    "第2回教室パーティー！": {
         "属性值": "card['第一属性']-80*0.00001",
         "流派": 0,
         "sp": 1,
@@ -3633,7 +3633,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "バズっちゃお！（椰树椰汁）": {
+    "バズっちゃお！": {
         "属性值": "card['第一属性']-81*0.00001",
         "流派": 2,
         "sp": 0,
@@ -3679,7 +3679,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "仕事のつもりで臨みなさい（学生会）": {
+    "仕事のつもりで臨みなさい": {
         "属性值": "card['第一属性']-82*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3725,7 +3725,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "SSDのひみつ（悄悄话）": {
+    "SSDのひみつ": {
         "属性值": "card['第一属性']-83*0.00001",
         "流派": 2,
         "sp": 1,
@@ -3817,7 +3817,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "まだまだのばしてー（黄老师）": {
+    "まだまだのばしてー": {
         "属性值": "card['第一属性']-85*0.00001",
         "流派": 0,
         "sp": 1,
@@ -3863,7 +3863,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "あなたにも作ってあげる！（黄睡）": {
+    "あなたにも作ってあげる！": {
         "属性值": "card['第一属性']-86*0.00001",
         "流派": 0,
         "sp": 0,
@@ -3909,7 +3909,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "どりゃぎゃ（矿泉水）": {
+    "どりゃぎゃ": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-87*0.00001",
         "流派": 1,
         "sp": 1,
@@ -3955,7 +3955,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "すっかり秋色ですわね！（秋色）": {
+    "すっかり秋色ですわね！": {
         "属性值": "card['第一属性']-88*0.00001",
         "流派": 1,
         "sp": 1,
@@ -4001,7 +4001,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "プロデュースって大変ね（大变卡）": {
+    "プロデュースって大変ね": {
         "属性值": "card['第一属性']-89*0.00001",
         "流派": 3,
         "sp": 1,
@@ -4047,7 +4047,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "海、楽しまなきゃ！（sr红睡）": {
+    "海、楽しまなきゃ！": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-90*0.00001",
         "流派": 2,
         "sp": 0,
@@ -4093,7 +4093,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "1人たりとも欠ける事なく（一年二班）": {
+    "1人たりとも欠ける事なく": {
         "属性值": "card['第一属性']-91*0.00001",
         "流派": 0,
         "sp": 1,
@@ -4231,7 +4231,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ブレイクタイムは珈琲で（sr红购物）": {
+    "ブレイクタイムは珈琲で": {
         "属性值": "card['第一属性']-94*0.00001",
         "流派": 2,
         "sp": 0,
@@ -4277,7 +4277,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "基礎＞応用（红老师）": {
+    "基礎＞応用": {
         "属性值": "card['第一属性']-95*0.00001",
         "流派": 0,
         "sp": 1,
@@ -4323,7 +4323,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "キュっと締めて（sr蓝购物）": {
+    "キュっと締めて": {
         "属性值": "card['第一属性']-96*0.00001",
         "流派": 1,
         "sp": 0,
@@ -4369,7 +4369,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "パシャっとキメポ（sr蓝睡）": {
+    "パシャっとキメポ": {
         "属性值": "card['第一属性']-97*0.00001",
         "流派": 1,
         "sp": 0,
@@ -4461,7 +4461,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "いつか、きっと花開く（sr黄睡）": {
+    "いつか、きっと花開く": {
         "属性值": "card['第一属性']-99*0.00001",
         "流派": 0,
         "sp": 0,
@@ -4507,7 +4507,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "目指すはテッペン（蓝老师）": {
+    "目指すはテッペン": {
         "属性值": "card['第一属性']-100*0.00001",
         "流派": 0,
         "sp": 1,
@@ -4553,7 +4553,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ひとりごとです（汤达人）": {
+    "ひとりごとです": {
         "属性值": "card['第一属性']-101*0.00001",
         "流派": 3,
         "sp": 0,
@@ -4599,7 +4599,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "主菓子、甘い、薄茶、渋み（茶道）": {
+    "主菓子、甘い、薄茶、渋み": {
         "属性值": "card['第一属性']-102*0.00001",
         "流派": 3,
         "sp": 1,
@@ -4645,7 +4645,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "わたしと美鈴、超仲良し（运动会）": {
+    "わたしと美鈴、超仲良し": {
         "属性值": "card['第一属性']-103*0.00001",
         "流派": 0,
         "sp": 0,
@@ -4691,7 +4691,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "よくやったな、倉本。（台灯）": {
+    "よくやったな、倉本。": {
         "属性值": "card['第一属性']-104*0.00001",
         "流派": 3,
         "sp": 1,
@@ -4737,7 +4737,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "あん・どぅ・とろわっ！（伸缩带）": {
+    "あん・どぅ・とろわっ！": {
         "属性值": "CardCalculator.IF(user['道具属性']==\"计算\",card['道具第一属性加成'],card['第一属性'])-105*0.00001",
         "流派": 3,
         "sp": 1,
@@ -4783,7 +4783,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "みんなの意見を聞かせて♪（发饰）": {
+    "みんなの意見を聞かせて♪": {
         "属性值": "card['第一属性']-106*0.00001",
         "流派": 3,
         "sp": 1,
@@ -4829,7 +4829,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "すっかり仲良しって感じ♪（金萝卜）": {
+    "すっかり仲良しって感じ♪": {
         "属性值": "card['第一属性']-107*0.00001",
         "流派": 1,
         "sp": 1,
@@ -4875,7 +4875,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "迷子のおしらせです（mygo）": {
+    "迷子のおしらせです": {
         "属性值": "card['第一属性']-108*0.00001",
         "流派": 2,
         "sp": 1,
@@ -4921,7 +4921,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "推し活なひととき、だね！（猫头鹰）": {
+    "推し活なひととき、だね！": {
         "属性值": "card['第一属性']-109*0.00001",
         "流派": 2,
         "sp": 0,
@@ -4967,7 +4967,7 @@
             "蓝借卡非凡sp": "CardCalculator.IF(CardCalculator.AND(CardCalculator.OR(attr['流派']==3,attr['流派']==0),attr['属性']==2,attr['sp']==1),attr['满破属性'],\"\")"
         }
     },
-    "ばたんきゅー（噗叽啪——）": {
+    "ばたんきゅー": {
         "属性值": "card['第一属性']-110*0.00001",
         "流派": 2,
         "sp": 1,
